@@ -4865,3 +4865,110 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 4738)
 
 
+Started GET "/pages" for 127.0.0.1 at 2020-11-22 15:10:12 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 4723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 1.2ms | Allocations: 13141)
+
+
+Started GET "/pages/8" for 127.0.0.1 at 2020-11-22 15:10:19 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 5275)
+
+
+Started GET "/pages/8/edit" for 127.0.0.1 at 2020-11-22 15:10:22 -0500
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  Rendering pages/edit.html.erb within layouts/application
+  Rendered pages/_form.html.erb (Duration: 15.9ms | Allocations: 2820)
+  Rendered pages/edit.html.erb within layouts/application (Duration: 17.5ms | Allocations: 3124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.2ms | Allocations: 7737)
+
+
+Started PATCH "/pages/8" for 127.0.0.1 at 2020-11-22 15:10:24 -0500
+Processing by PagesController#update as HTML
+  Parameters: {"authenticity_token"=>"xHgGkpXjYYS1UdS8QojmzDC/BWvbMaSpC1HCREZiFsDwFxAxxDGuV+5H+NYBLmLqFRnxCzFubdeJ8Gt8pUnshA==", "page"=>{"title"=>"asdasd2323", "body"=>"asdas", "slug"=>"dasd"}, "commit"=>"Update Page", "id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pages_controller.rb:33:in `update'
+  [1m[36mPage Update (0.6ms)[0m  [1m[33mUPDATE "pages" SET "title" = ?, "updated_at" = ? WHERE "pages"."id" = ?[0m  [["title", "asdasd2323"], ["updated_at", "2020-11-22 20:10:24.214586"], ["id", 8]]
+  ↳ app/controllers/pages_controller.rb:33:in `update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pages_controller.rb:33:in `update'
+Redirected to http://localhost:3000/pages/8
+Completed 302 Found in 18ms (ActiveRecord: 2.2ms | Allocations: 3517)
+
+
+Started GET "/pages/8" for 127.0.0.1 at 2020-11-22 15:10:24 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 4543)
+
+
+Started GET "/pages" for 127.0.0.1 at 2020-11-22 15:10:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4729)
+
+
+Started GET "/pages/8" for 127.0.0.1 at 2020-11-22 15:10:26 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4553)
+
+
+Started DELETE "/pages/8" for 127.0.0.1 at 2020-11-22 15:10:27 -0500
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x8aWBlti5Recf07hIxsyBPPH4obEdT+iTh/myL6keRc0SDn4ZjmYTuBfhxVHVzw3H3aR6ElPJbY22e1BWp7xIw==", "id"=>"8"}
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:50:in `set_page'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pages_controller.rb:39:in `destroy'
+  [1m[36mPage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pages" WHERE "pages"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/pages_controller.rb:39:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pages_controller.rb:39:in `destroy'
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms | Allocations: 2700)
+
+
+Started GET "/pages" for 127.0.0.1 at 2020-11-22 15:10:27 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4661)
+
+
